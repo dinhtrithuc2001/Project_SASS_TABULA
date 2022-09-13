@@ -1,0 +1,40 @@
+.banner {
+    position: relative;
+  &__img-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &__img-bot {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  &__content {
+    height: 100vh;
+    h4 {
+      color: #b61984;
+      font-size: 1.2rem;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    h2 {
+      font-size: 4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    @include responsive('Medium'){
+      padding-top: 8rem;
+      h4 {
+        font-size: 1rem;
+      }
+      h2 {
+        font-size: 2.5rem;
+      }
+    }
+    @include responsive('Small'){
+      padding-top: 5rem;
+    }
+  }
+}

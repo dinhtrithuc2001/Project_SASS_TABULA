@@ -1,0 +1,40 @@
+@mixin styleText($fs, $fw, $color) {
+  font: {
+    size: $fs;
+    weight: $fw;
+  }
+  color: $color;
+}
+
+@mixin styleDotHeader($size) {
+  transform: scale($size);
+  content: "";
+  position: absolute;
+  background-color: $secondary-color;
+  height: 8px;
+  width: 8px;
+  display: block;
+  border-radius: 50%;
+  left: 50%;
+  bottom: 0;
+  margin-left: -4px;
+  transition: all 0.3s;
+}
+
+@mixin styleBtn($bg, $textColor){
+  box-shadow: 0 0 0 1px $bg inset;
+  color: $textColor;
+}
+
+// Responsive 
+@mixin responsive($screen){
+  @if(map-has-key($map: $breakpoint, $key: $screen)){
+    $value: map-get($map: $breakpoint, $key: $screen);
+    @media screen and (max-width: $value) {
+      @content;
+    }
+  }
+  @else {
+    @warn"`{$screen}` isn't in breakpoint";
+  }
+}

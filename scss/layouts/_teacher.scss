@@ -1,0 +1,11 @@
+.teachers{
+    background: #dcd1f3;
+    position: relative;
+
+    &__wrap {
+        background-image: url("../../img/Wave_White_bottom_right_shape_01.png");
+        background-size: contain;
+        background-position: center bottom;
+        width: 100%;
+    }
+}

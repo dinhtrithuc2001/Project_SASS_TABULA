@@ -1,0 +1,42 @@
+.teachers__item {
+    padding: 0 20px;
+    .teachers__card {
+        margin-top: 40px;
+        border-radius: 10px !important;
+        transition: all 0.5s;
+        &:hover {
+            box-shadow: 1px 3px 18px 0 #343434b2;
+        }
+        &__img {
+            border-radius: 10px 10px 0 0;
+            overflow: hidden;
+
+            img {
+                border-radius: 10px 10px 0 0;
+                transition: all 0.5s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        &__text {
+            border-radius: 0 0 10px 10px;
+            background: white;
+            padding: 22px;
+            text-align: center;
+
+            h4 {
+                @include styleText(12px, 600, $secondary-color);
+                letter-spacing: 1px;
+            }
+
+            h2 {
+                @include styleText(24px, 600, $primary-color);
+                letter-spacing: 1px;
+                margin-bottom: 1.1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    img{
+        @include responsive('Large'){
+            width: 70px;
+        }
+        @include responsive('Small'){
+            width: 50px;
+        }
+    }
+    .navbar-nav {
+        margin-right: 2rem;
+        .nav-item{
+            position: relative;
+            margin: 0 1.2rem;
+            .nav-link {
+                @include styleText(14px, 500,$primary-color);
+                transition: all 0.3s;
+                letter-spacing: 0.5px;
+                line-height: 70px;
+                &::after {
+                    @include styleDotHeader(0);    
+                }
+                &.active {
+                    &::after {
+                        @include styleDotHeader(1);
+                    }
+                }
+                &:hover {
+                    color: $secondary-color;
+                    &::after {
+                        @include styleDotHeader(1.5);
+                    }
+                }
+            }
+        }
+    }
+    .navbar-collapse {
+        justify-content: flex-end;
+        @include responsive('Large'){
+            background: white;
+            text-align: center;
+            .nav-link {
+                line-height: 50px !important;
+            }
+            .nav-link::after {
+                display: none !important;
+            }
+            .iconList {
+                margin-left: 0;
+                margin-top: 1rem;
+            }
+        }
+    }
+    .iconList {
+        margin-left: 1.5rem;
+        a {
+            font-size: 13px;
+            color: $primary-color;
+            margin-right: 10px;
+            text-decoration: none;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $secondary-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.courses {
+    background-image: url("../../img/accent_bottom_wave_01.png");
+    background-size: contain;
+    background-position: center bottom;
+    margin-top: 3rem;
+    padding: 0 16rem;
+
+    @include responsive('Extra-large'){
+        padding: 0 0;
+    }
+}
