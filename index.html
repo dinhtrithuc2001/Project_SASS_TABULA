@@ -23,6 +23,22 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Style CSS -->
   <link rel="stylesheet" href="./css/style.css" />
+
+  <style>
+    .loader {
+  border: 12px solid #f3f3f3; /* Light grey */
+  border-top: 12px solid #b61984; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  </style>
 </head>
 
 <body>
@@ -107,89 +123,10 @@
     <section class="teachers">
       <div class="teachers__wrap">
         <div class="container">
-          <div class="row">
-            <div class="teachers__item col-lg-3 col-12 col-md-4 col-sm-6">
-              <div class="teachers__card">
-                <div class="teachers__card__img">
-                  <img class="img-fluid" src="./img/teacher_1.jpg" alt="">
-                </div>
-                <div class="teachers__card__text">
-                  <h4>ITALIAN</h4>
-                  <h2>July Roberts</h2>
-                  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
-                </div>
-              </div>
-            </div>
-            <div class="teachers__item col-lg-3 col-12 col-md-4 col-sm-6">
-              <div class="teachers__card">
-                <div class="teachers__card__img"><img class="img-fluid" src="./img/teacher_2.jpg" alt=""></div>
-                <div class="teachers__card__text">
-                  <h4>FRENCH</h4>
-                  <h2>Jon Stone</h2>
-                  <p>Nanotechnology immersion along the information.</p>
-                </div>
-              </div>
-            </div>
-            <div class="teachers__item col-lg-3 col-12 col-md-4 col-sm-6">
-              <div class="teachers__card">
-                <div class="teachers__card__img"><img class="img-fluid" src="./img/teacher_3.jpg" alt=""></div>
-                <div class="teachers__card__text">
-                  <h4>JAPANESE</h4>
-                  <h2>Emma Stone</h2>
-                  <p>Bring to the table win-win survival strategies to ensure.</p>
-                </div>
-              </div>
-            </div>
-            <div class="teachers__item col-lg-3 col-12 col-md-4 col-sm-6">
-              <div class="teachers__card">
-                <div class="teachers__card__img"><img class="img-fluid" src="./img/teacher_4.jpg" alt=""></div>
-                <div class="teachers__card__text">
-                  <h4>CHINESE</h4>
-                  <h2>Mark Lee</h2>
-                  <p>Proactive domination. At the end of the day, going forward.</p>
-                </div>
-              </div>
-            </div>
-            <div class="teachers__item col-lg-3 col-12 col-md-4 col-sm-6">
-              <div class="teachers__card">
-                <div class="teachers__card__img"><img class="img-fluid" src="./img/teacher_5.jpg" alt=""></div>
-                <div class="teachers__card__text">
-                  <h4>RUSSIAN</h4>
-                  <h2>John Doe</h2>
-                  <p>A new normal that has evolved from generation X.</p>
-                </div>
-              </div>
-            </div>
-            <div class="teachers__item col-lg-3 col-12 col-md-4 col-sm-6">
-              <div class="teachers__card">
-                <div class="teachers__card__img"><img class="img-fluid" src="./img/teacher_6.jpg" alt=""></div>
-                <div class="teachers__card__text">
-                  <h4>SWEDEN</h4>
-                  <h2>Jane Smith</h2>
-                  <p>Heading towards a streamlined cloud solution.</p>
-                </div>
-              </div>
-            </div>
-            <div class="teachers__item col-lg-3 col-12 col-md-4 col-sm-6">
-              <div class="teachers__card">
-                <div class="teachers__card__img"><img class="img-fluid" src="./img/teacher_7.jpg" alt=""></div>
-                <div class="teachers__card__text">
-                  <h4>SPANISH</h4>
-                  <h2>Hanna Alverez</h2>
-                  <p>Content in real-time will have multiple touchpoints.</p>
-                </div>
-              </div>
-            </div>
-            <div class="teachers__item col-lg-3 col-12 col-md-4 col-sm-6">
-              <div class="teachers__card">
-                <div class="teachers__card__img"><img class="img-fluid" src="./img/teacher_8.jpg" alt=""></div>
-                <div class="teachers__card__text">
-                  <h4>ITALIAN</h4>
-                  <h2>July Roberts</h2>
-                  <p>Capitalize on low hanging fruit to identify a ballpark.</p>
-                </div>
-              </div>
-            </div>
+          <div>
+            <div id="loader" style="display: none;" class="loader mx-auto"></div>
+          </div>
+          <div id="teachers" class="row">
           </div>
         </div>
       </div>
@@ -331,9 +268,13 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
     integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
     crossorigin="anonymous"></script>
-
+  <!-- AXIOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- Service js -->
+  <script src="./src/services/service.js"></script>
+  
   <!-- Main js -->
-  <script src="./js/main.js"></script>
+  <script src="./src/controller/main.js"></script>
 </body>
 
 </html>
